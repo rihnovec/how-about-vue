@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ref } from 'vue';
 import RawIcon from '../../../RawIcon.vue';
 
 import type { FormControl } from '../../../../types/FormControl';
@@ -17,13 +16,8 @@ const {
   errorMessage
 } = defineProps<Props>();
 
-const message = ref('');
 const isPasswordInput = type === 'password';
-
 const { inputType, passwordShown, toggleType } = useInputTypeSwitcher(type);
-function onInput(event: Event) {
-//   validate(target.value)
-}
 </script>
 
 <template>
@@ -37,7 +31,7 @@ function onInput(event: Event) {
       <input class="form-input__control"
              :type="inputType"
              :name="name"
-             :placeholder="placeholder" @input="onInput">
+             :placeholder="placeholder">
     </label>
     <button class="form-input-switcher" type="button" @click="toggleType" v-if="isPasswordInput">
       <RawIcon name="eye-hide" color="#818E9C" v-if="passwordShown" />
