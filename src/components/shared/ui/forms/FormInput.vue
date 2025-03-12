@@ -34,8 +34,8 @@ const { inputType, passwordShown, toggleType } = useInputTypeSwitcher(type);
              :placeholder="placeholder">
     </label>
     <button class="form-input-switcher" type="button" @click="toggleType" v-if="isPasswordInput">
-      <RawIcon name="eye-hide" color="#818E9C" v-if="passwordShown" />
-      <RawIcon name="eye-show" color="#818E9C" v-else />
+      <RawIcon name="eye-show" color="#818E9C" v-if="passwordShown" />
+      <RawIcon name="eye-hide" color="#818E9C" v-else />
     </button>
     <span class="form-input__error" v-if="!isValid">{{ errorMessage }}</span>
   </div>
