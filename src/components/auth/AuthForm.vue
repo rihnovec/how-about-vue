@@ -12,14 +12,20 @@ import Copyright from '../shared/ui/Copyright.vue';
 
 import { useAuthStore } from '../../store/auth-store';
 import type { State } from '../../store/auth-store';
+import type { AuthPayload } from '../../types/auth';
 import { storeToRefs } from 'pinia';
+import { formDataToObject } from '../shared/helpers/formDataToObject';
 
 const authStore: State = useAuthStore();
-const { formValid } = authStore;
+const { formValid, auth } = authStore;
 const { controls, endpoint } = storeToRefs(authStore);
 
-async function onSubmit(event?: Event) {
-  console.log(event);
+async function onSubmit(event: Event) {
+  const formData = new FormData(event.target);
+  const formPayload = formDataToObject(formData) as AuthPayload;
+
+  const response = await auth(formPayload);
+  console.log(response);
 }
 </script>
 

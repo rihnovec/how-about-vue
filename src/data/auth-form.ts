@@ -2,11 +2,11 @@ import type { FormControl } from '../types/FormControl';
 
 export const controls: FormControl[] = [
   {
-    name: 'email',
+    name: 'login',
     type: 'text',
     iconName: 'email',
     placeholder: 'you@example.com',
-    isValid: false,
+    isValid: true,
     errorMessage: 'Невалидный email',
     validate: value => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)
   },
