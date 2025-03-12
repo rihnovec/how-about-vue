@@ -30,5 +30,7 @@ import AuthForm from './AuthForm.vue';
     width: 60%;
     min-width: 0;
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
   }
 </style>
