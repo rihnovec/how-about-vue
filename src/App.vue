@@ -1,31 +1,33 @@
-<script setup lang="ts"> 
+<script setup lang="ts">
+import Auth from './components/auth/Auth.vue'
 import RawIcon from './components/RawIcon.vue' 
 
 </script>
 
 <template>
   <div>
-    <div class="icons">
-      <h2>Example Icons</h2> 
-      
-      <label for="" class="input__box">
-        <RawIcon name="email"  ></RawIcon>
-        <RawIcon name="password" color="black"></RawIcon>
-        <RawIcon name="eye-show"></RawIcon>
-        <RawIcon name="eye-hide"></RawIcon>
-        
-        <input type="text">
-      </label>
-    </div>
-    
-    <div class="box">
-      <div class="resize">
-         <img src="./assets/social-yandex.svg" alt="" class="icon email" />
-       </div>
-      <div class="resize">
-        <img src="./assets/social-google.svg" alt="" class="icon password" />
-      </div>
-    </div>
+    <Auth />
+<!--    <div class="icons">-->
+<!--      <h2>Example Icons</h2> -->
+<!--      -->
+<!--      <label for="" class="input__box">-->
+<!--        <RawIcon name="email"  ></RawIcon>-->
+<!--        <RawIcon name="password" color="black"></RawIcon>-->
+<!--        <RawIcon name="eye-show"></RawIcon>-->
+<!--        <RawIcon name="eye-hide"></RawIcon>-->
+<!--        -->
+<!--        <input type="text">-->
+<!--      </label>-->
+<!--    </div>-->
+<!--    -->
+<!--    <div class="box">-->
+<!--      <div class="resize">-->
+<!--         <img src="./assets/social-yandex.svg" alt="" class="icon email" />-->
+<!--       </div>-->
+<!--      <div class="resize">-->
+<!--        <img src="./assets/social-google.svg" alt="" class="icon password" />-->
+<!--      </div>-->
+<!--    </div>-->
   </div> 
 </template>
 
