@@ -43,13 +43,16 @@ function onInput(event: Event) {
       <RawIcon name="eye-hide" color="#818E9C" v-if="passwordShown" />
       <RawIcon name="eye-show" color="#818E9C" v-else />
     </button>
-    <span class="form-input" v-if="message">{{ message }}</span>
+    <span class="form-input__error" v-if="!isValid">{{ errorMessage }}</span>
   </div>
 </template>
 
 <style scoped>
 .form-input-group {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .form-input {
@@ -83,6 +86,17 @@ function onInput(event: Event) {
 
 .form-input-group_password .form-input__control {
   padding-right: 54px;
+}
+
+.form-input-group_error .form-input__control {
+  border-color: #a23a3a;
+}
+
+.form-input__error {
+  margin-top: 4px;
+  font-size: 14px;
+  line-height: 100%;
+  color: #a23a3a;
 }
 
 .form-input__control:focus {

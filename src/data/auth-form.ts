@@ -6,7 +6,7 @@ export const controls: FormControl[] = [
     type: 'text',
     iconName: 'email',
     placeholder: 'you@example.com',
-    isValid: true,
+    isValid: false,
     errorMessage: 'Невалидный email',
     validate: value => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)
   },
